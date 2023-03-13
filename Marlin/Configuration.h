@@ -629,7 +629,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      100
+#define BED_MAXTEMP      125
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -1871,6 +1871,30 @@
  *   For machines without a probe, Mesh Bed Leveling provides a method to perform
  *   leveling in steps so you can manually adjust the Z height at each grid-point.
  *   With an LCD controller the process is guided step-by-step.
+ * 
+ * - CURRENT MECREATOR MESH POINTS
+ *   
+ *   0 +0.05000 +0.00000 -0.00000 -0.02500
+ *   1 +0.05000 -0.02500 -0.00000 +0.10000
+ *   2 -0.05000 -0.12500 -0.07500 +0.05000
+ *   3 -0.05000 -0.12500 -0.05000 +0.07500
+ * 
+ *   G29 S3 I0 J0 Z0.05000
+ *   G29 S3 I1 J0 Z0.00000
+ *   G29 S3 I2 J0 Z-0.00000
+ *   G29 S3 I3 J0 Z-0.02500
+ *   G29 S3 I0 J1 Z0.05000
+ *   G29 S3 I1 J1 Z-0.02500
+ *   G29 S3 I2 J1 Z-0.00000
+ *   G29 S3 I3 J1 Z0.10000
+ *   G29 S3 I0 J2 Z-0.05000
+ *   G29 S3 I1 J2 Z-0.12500
+ *   G29 S3 I2 J2 Z-0.07500
+ *   G29 S3 I3 J2 Z0.05000
+ *   G29 S3 I0 J3 Z-0.05000
+ *   G29 S3 I1 J3 Z-0.12500
+ *   G29 S3 I2 J3 Z-0.05000
+ *   G29 S3 I3 J3 Z0.07500 
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
@@ -2227,9 +2251,9 @@
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_3_LABEL       "ABS"
+#define PREHEAT_3_LABEL       "PETG"
 #define PREHEAT_3_TEMP_HOTEND 250
-#define PREHEAT_3_TEMP_BED    80
+#define PREHEAT_3_TEMP_BED    100
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
