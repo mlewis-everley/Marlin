@@ -95,15 +95,15 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PC2   // TH1
-#define TEMP_1_PIN                          PC1   // TH2
+#define TEMP_0_PIN                          PC1   // TH1
+#define TEMP_1_PIN                          PC2   // TH2
 #define TEMP_BED_PIN                        PC0   // TB1
 
 //
 // Heaters / Fans
 //
 #ifndef HEATER_0_PIN
-  #define HEATER_0_PIN                      PB0
+  #define HEATER_0_PIN                      PC3
 #endif
 #ifndef FAN_PIN
   #define FAN_PIN                           PB1   // FAN
@@ -112,13 +112,13 @@
   #define HEATER_BED_PIN                    PA0
 #endif
 
-//#if HOTENDS == 1 && DISABLED(HEATERS_PARALLEL)
-//  #ifndef FAN1_PIN
-//    #define FAN1_PIN                        PB0
-//  #endif
-//#elif !defined(HEATER_1_PIN)
-//  #define HEATER_1_PIN                      PB0
-//#endif
+#if HOTENDS == 1 && DISABLED(HEATERS_PARALLEL)
+  #ifndef FAN1_PIN
+    #define FAN1_PIN                        PB0
+  #endif
+#elif !defined(HEATER_1_PIN)
+  #define HEATER_1_PIN                      PB0
+#endif
 
 //
 // Power Supply Control
