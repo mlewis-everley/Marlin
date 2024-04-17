@@ -238,7 +238,7 @@
   #define BTN_EN2                    EXP3_05_PIN
 
   #ifndef HAS_PIN_27_BOARD
-    #define BEEPER_PIN               EXP3_01_PIN
+    #define BEEPER_PIN               -1 //EXP3_01_PIN
   #endif
 
 #elif ANY(HAS_DWIN_E3V2, IS_DWIN_MARLINUI, DWIN_VET6_CREALITY_LCD)
