@@ -28,7 +28,7 @@
 /**
  * Marlin release version identifier
  */
-#define SHORT_BUILD_VERSION "2.1.x-SV06-R2"
+#define SHORT_BUILD_VERSION "2.1.x-SV06-R3"
 
 /**
  * Verbose version identifier which should contain a reference to the location
