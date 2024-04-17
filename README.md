@@ -1,6 +1,6 @@
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
-<h1 align="center">Marlin 3D Printer Firmware</h1>
+<h1 align="center">Marlin - SV06 EDITION</h1>
 
 <p align="center">
     <a href="/LICENSE"><img alt="GPL-V3.0 License" src="https://img.shields.io/github/license/marlinfirmware/marlin.svg"></a>
@@ -11,6 +11,20 @@
     <br />
     <a href="https://fosstodon.org/@marlinfirmware"><img alt="Follow MarlinFirmware on Mastodon" src="https://img.shields.io/mastodon/follow/109450200866020466?domain=https%3A%2F%2Ffosstodon.org&logoColor=%2300B&style=social"></a>
 </p>
+
+Custom fork of Marlin Bugfix 2.1.x. The config is re-written from scratch using the base SV06 firmware as reference.
+
+This fork of Marlin adds additional features and tweaks, not present in the base marlin fork, including:
+
+  * Input shaping enabled by default (with a base config)
+  * Marlin Cancel Objects enabled (additional slicer config required)
+  * XY steppers increased to 1/64 microstepping for smoother (and quieter) operation at higher speeds
+  * Move Z-Safe probe location to front left (instead of center of bed)
+  * Enable "host actions" for better integration with OctoPrint
+
+---
+
+# Marlin 3D Printer Firmware
 
 Additional documentation can be found at the [Marlin Home Page](https://marlinfw.org/).
 Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
